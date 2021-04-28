@@ -1,0 +1,38 @@
+{
+  "name": "report-generator",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "generate": "nuxt-ts generate",
+    "start": "nuxt-ts start",
+    "test": "jest",
+    "lint": "eslint --ext .ts,.js,.vue ."
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^0.4.10",
+    "@nuxtjs/axios": "^5.11.0",
+    "html2canvas": "^1.0.0-rc.7",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.14.5"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^1.0.3",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/eslint-config-typescript": "^2.0.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@types/html2canvas": "^0.0.36",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-vue-scoped-css": "^0.5.0",
+    "jest": "^26.0.1",
+    "node-sass": "^4.14.1",
+    "nuxt-typed-vuex": "^0.1.19",
+    "sass-loader": "^8.0.2",
+    "ts-jest": "^26.1.0",
+    "vue-jest": "^3.0.4"
+  }
+}
