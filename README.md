@@ -1,2 +1,2 @@
-# report-generator
+# gohokoku-generator
 ご報告ジェネレーター
