@@ -6,7 +6,7 @@ export const downloadUrl = (url: string) => {
   const link = document.createElement('a');
   link.href = url;
   link.target = '_blank';
-  link.download = 'download.png';
+  link.download = 'gohokoku.png';
   document.body.appendChild(link);
   link.click();
 };
