@@ -1,7 +1,32 @@
 <template>
   <div class="un_container">
+    <p class="is-size-6 mt-4">
+      タイトル
+    </p>
+    <input v-model="title" class="input" type="text">
+
+    <p class="is-size-6 mt-4">
+      本文
+    </p>
+    <textarea v-model="text" class="textarea" />
+
+    <p class="is-size-6 mt-4">
+      日付
+    </p>
+    <input v-model="date" class="input" type="text">
+
+    <p class="is-size-6 mt-4">
+      名前
+    </p>
+    <input v-model="name" class="input" type="text">
+
+    <p class="is-size-6 mt-4">
+      プレビュー
+    </p>
     <div id="target" class="un_preview">
-      <span class="un_preview_title">{{ title }}</span>
+      <p class="un_preview_title">
+        <span>{{ title }}</span>
+      </p>
       <p class="un_preview_text">
         {{ text }}
       </p>
@@ -13,20 +38,8 @@
       </p>
     </div>
 
-    <p>タイトル</p>
-    <input v-model="title" type="text">
-
-    <p>本文</p>
-    <textarea v-model="text" />
-
-    <p>日付</p>
-    <input v-model="date" type="text">
-
-    <p>名前</p>
-    <input v-model="name" type="text">
-
-    <button @click="download">
-      download
+    <button class="button is-info mt-4 hp_mlAuto" @click="download">
+      ダウンロード
     </button>
   </div>
 </template>
@@ -50,6 +63,7 @@ export default Vue.extend({
     download () {
       const targetElement = document.getElementById('target');
       if (!targetElement) { return; }
+      document.documentElement.scrollTo(0, 0);
       this.downloadElement(targetElement);
     },
     downloadElement (element: HTMLElement) {
@@ -77,11 +91,12 @@ export default Vue.extend({
 .un_container {
   margin: 0 auto;
   min-height: 100vh;
+  max-width: 1080px;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   font-size: 12px;
 }
 
@@ -98,7 +113,9 @@ export default Vue.extend({
   font-weight: 400;
 
   &_title {
+    width: 100%;
     height: 20px;
+    text-align: center;
     font-size: 14px;
     font-weight: 400;
   }
@@ -118,5 +135,9 @@ export default Vue.extend({
     height: 20px;
     text-align: right;
   }
+}
+
+.hp_mlAuto {
+  margin-left: auto;
 }
 </style>

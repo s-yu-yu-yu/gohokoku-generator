@@ -37,6 +37,7 @@ const nuxtConfig: Configuration = {
   ** Global CSS
   */
   css: [
+    'bulma',
     'normalize.css',
     '~/assets/scss/base.scss'
   ],
